@@ -1,7 +1,12 @@
 # import special libraries already built in python
-import random
+import random, urllib2
 
 # list of options to select from
+the_url = 'https://raw.githubusercontent.com/bellcodo/congenial-octo-meme/master/activities.lst'
+list_raw_text = urllib2.urlopen(the_url).read()
+
+print "DEBUG: " + str(list_raw_text.split())
+
 possible_activities = ['a', 'b', 'c']
 
 # choice of what we are going to do
